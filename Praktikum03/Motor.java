@@ -29,14 +29,14 @@ public class Motor {
     public int getKecepatan() {
         return kecepatan;
     }
-    public void setKecepatan(int kecepatan) {//modifkasi kecepatan maks 100
-        if (!statusMesin && kecepatan > 0) {
+    public void setKecepatan(int kecepatan) { // modifikasi tidak boleh negatif dan maks 100
+        if (kecepatan < 0) {
+            System.out.println("Kecepatan tidak boleh bernilai negatif");
+        } else if (!statusMesin && kecepatan > 0) {
             System.out.println("Kecepatan tidak boleh lebih dari 0 jika mesin off");
         } else if (kecepatan > 100) {
             System.out.println("Kecepatan tidak boleh lebih dari 100 km/jam");
-            this.kecepatan = 100; // dibatasi otomatis ke nilai maksimal
-        } else if (kecepatan < 0) {
-            System.out.println("Kecepatan tidak boleh bernilai negatif");
+            this.kecepatan = 100; 
         } else {
             this.kecepatan = kecepatan;
         }

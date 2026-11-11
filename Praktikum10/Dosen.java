@@ -27,9 +27,9 @@ public class Dosen extends Pegawai implements Comparable<Dosen> {
     //     return this.nama.compareTo(otherDosen.nama);
     // }
 
-    // Pengurutan berdasarkan NIP (Pertanyaan 2.10 no. 3)
+    // Pengurutan berdasarkan NIDN (Pertanyaan 2.10 no. 3)
     @Override
     public int compareTo(Dosen otherDosen) {
-        return this.nip.compareTo(otherDosen.nip);
+        return this.nidn.compareTo(otherDosen.nidn);
     }
 }
